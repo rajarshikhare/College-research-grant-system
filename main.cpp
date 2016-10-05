@@ -2,6 +2,8 @@
 #include"loginask.cpp"
 using namespace std;
 
+/* my name is khan and i am not a terrorist*/
+
 int main() {
     int operation;
     cout<<"====================  Ministry of Human Resource Development About MHRD  ========================"<<endl<<endl;
