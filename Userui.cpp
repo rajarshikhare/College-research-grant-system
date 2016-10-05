@@ -1,11 +1,12 @@
 #include"Usercredential.cpp"
 
-void Userui(){
+void userui(){
     system("cls");
+    cout<<"             ====================  Welcome to College/University Portal  ========================"<<endl<<endl<<endl<<endl<<endl;
     string collegename,password;
-    cout<<"Enter the college name : ";
+    cout<<"                                 Enter the college name : ";
     cin>>collegename;
-    cout<<"Password : ";
+    cout<<"                                 Password : ";
     cin>>password;
     Usercredential(collegename,password);
 }
