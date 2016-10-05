@@ -1,7 +1,5 @@
 #include<iostream>
-#include<fstream>
 #include"loginask.cpp"
-#include "userui.cpp"
 using namespace std;
 
 int main() {
