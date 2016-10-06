@@ -16,7 +16,7 @@ int main() {
     cout<<"     -----------"<<endl;
     cout<<"     2. Register"<<endl;
     cout<<"     -----------"<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
-    //cout<<"Contact us at : mhrd.gov.in"<<endl;
+
     cout<<"\n\nEnter your choice : ";
     cin>>operation;
     switch (operation){
@@ -26,4 +26,5 @@ int main() {
                    break;
     }
     return 0;
+
 }
