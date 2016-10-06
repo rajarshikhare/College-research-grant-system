@@ -1,13 +1,11 @@
-#include<iostream>
-#include<conio.h>
-using namespace std;
+string password();
 
-int main(){
+string password(){
     int i = 0;
     char c,pass[10];
-    while(c != '\n'){
+    while(1){
         c = getch();
-        if(c == '\n'){
+        if(c == 13){
             break;
         } else if(c == '\b'){
             cout<<"\b";
@@ -18,6 +16,8 @@ int main(){
             cout<<"*";
             pass[i++] = c;
         }
+        pass[i] = '\0';
     }
-    cout<<pass;
+    string str = string(pass);
+    return str;
 }
