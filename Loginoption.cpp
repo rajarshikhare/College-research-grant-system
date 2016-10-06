@@ -23,4 +23,3 @@ loginoption(){
     }
     return 0;
 }
-/*i was here not here*/
