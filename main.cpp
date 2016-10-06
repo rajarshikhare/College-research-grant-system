@@ -2,7 +2,8 @@
 #include<cstring>
 #include<fstream>
 #include<conio.h>
-#include"loginoption.cpp"
+#include"Loginoption.cpp"
+#include "register.cpp"
 using namespace std;
 
 
@@ -20,9 +21,9 @@ int main() {
     cout<<"\n\nEnter your choice : ";
     cin>>operation;
     switch (operation){
-        case (1) : loginoption();
+        case (1) : loginchoose();
                    break;
-        case (2) : //Adminui();
+        case (2) : registeration();
                    break;
     }
     return 0;
