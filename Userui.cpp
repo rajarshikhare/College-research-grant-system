@@ -14,14 +14,16 @@ void userui(){
     //cout<<"                                 ----------------------"<<endl;
     cout<<"\n                                               Password : ";
     //cout<<"\n                                 ----------------------"<<endl;
-    for(int i = 0; i < 220; i++){
+    /*for(int i = 0; i < 220; i++){
         cout<<"\b";
-    }
+    }*/
+    gotoxy(58,6);
     cin>>collegename;
     /*for(int i = 0; i < 46; i++){
         cout<<" ";
     }*/
     cout<<"\n                                               Password : ";
+    gotoxy(58,8);
     password = getpassword();
     //password = encryption::encrypt(password);
     Usercredential(collegename,password);

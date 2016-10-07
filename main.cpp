@@ -1,10 +1,11 @@
 #include<iostream>
+using namespace std;
+#include"position.h"
 #include<cstring>
 #include<fstream>
 #include<conio.h>
 #include"Loginoption.cpp"
 #include "register.cpp"
-using namespace std;
 
 
 int main() {
