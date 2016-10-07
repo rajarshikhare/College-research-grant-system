@@ -5,7 +5,7 @@ using namespace std;
 #include<conio.h>
 #include"position.h"
 #include"Loginoption.cpp"
-//#include "register.cpp"
+#include "register.cpp"
 
 int main() {
     system("cls");
