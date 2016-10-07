@@ -1,6 +1,6 @@
 #include"userui.cpp"
 
-int loginchoose(){
+int loginoption(){
     system("cls");
     int operation;
     cout<<"====================  Ministry of Human Resource Development About MHRD  ========================"<<endl<<endl;

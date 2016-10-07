@@ -1,37 +1,43 @@
-#include"Usercredential.cpp"
+
 #include"encryption.cpp"
 
-string getpassword();
+string gethiddenpassword();
+
+class credentials{
+    string username,password;
+public:
+    void getusername(){
+        cin>>username;
+    }
+    void getpassword(){
+        password = gethiddenpassword();
+    }
+    friend void usercredential(credentials);
+};
+
+#include"usercredential.cpp"
 
 void userui(){
     system("cls");
+    credentials c;
     cout<<"\n             ====================  Welcome to College/University Portal  ========================"<<endl<<endl<<endl<<endl<<endl;
     string collegename,password;
     cout<<"                                 ----------------------"<<endl;
     cout<<"                                 Enter the college name : "<<endl;;
-    //cin>>collegename;
-    //collegename = encryption::encrypt(collegename);
     cout<<"                                 ----------------------"<<endl;
     cout<<"\n                                               Password : ";
     cout<<"\n                                 ----------------------"<<endl;
-    /*for(int i = 0; i < 220; i++){
-        cout<<"\b";
-    }*/
     gotoxy(58,7);
-    cin>>collegename;
-    /*for(int i = 0; i < 46; i++){
-        cout<<" ";
-    }*/
+    c.getusername();
     cout<<"\n\n                                               Password : ";
     gotoxy(58,10);
-    password = getpassword();
-    //password = encryption::encrypt(password);
-    Usercredential(collegename,password);
+    c.getpassword();
+    usercredential(c);
 }
 
 
 
-string getpassword(){
+string gethiddenpassword(){
     int i = 0;
     char c,pass[10];
     while(1){

@@ -1,12 +1,11 @@
 #include<iostream>
 using namespace std;
-#include"position.h"
 #include<cstring>
 #include<fstream>
 #include<conio.h>
+#include"position.h"
 #include"Loginoption.cpp"
-#include "register.cpp"
-
+//#include "register.cpp"
 
 int main() {
     system("cls");
@@ -22,9 +21,9 @@ int main() {
     cout<<"\n\nEnter your choice : ";
     cin>>operation;
     switch (operation){
-        case (1) : loginchoose();
+        case (1) : loginoption();
                    break;
-        case (2) : registeration();
+        case (2) : //registeration();
                    break;
     }
     return 0;

@@ -1,6 +1,9 @@
 #include "useroperationui.cpp"
 
-void Usercredential(string username,string password){
+
+void usercredential(credentials c){
+    string username = c.username;
+    string password = c.password;
     fstream fp;
     string fileusername,filepassword;
     fp.open("csv files/usercredential.csv",ios::in);
