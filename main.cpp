@@ -23,7 +23,7 @@ int main() {
     switch (operation){
         case (1) : loginoption();
                    break;
-        case (2) : //registeration();
+        case (2) : registeration r;
                    break;
     }
     return 0;
