@@ -7,23 +7,23 @@ void userui(){
     system("cls");
     cout<<"\n             ====================  Welcome to College/University Portal  ========================"<<endl<<endl<<endl<<endl<<endl;
     string collegename,password;
-    //cout<<"                                 ----------------------"<<endl;
+    cout<<"                                 ----------------------"<<endl;
     cout<<"                                 Enter the college name : "<<endl;;
     //cin>>collegename;
     //collegename = encryption::encrypt(collegename);
-    //cout<<"                                 ----------------------"<<endl;
+    cout<<"                                 ----------------------"<<endl;
     cout<<"\n                                               Password : ";
-    //cout<<"\n                                 ----------------------"<<endl;
+    cout<<"\n                                 ----------------------"<<endl;
     /*for(int i = 0; i < 220; i++){
         cout<<"\b";
     }*/
-    gotoxy(58,6);
+    gotoxy(58,7);
     cin>>collegename;
     /*for(int i = 0; i < 46; i++){
         cout<<" ";
     }*/
-    cout<<"\n                                               Password : ";
-    gotoxy(58,8);
+    cout<<"\n\n                                               Password : ";
+    gotoxy(58,10);
     password = getpassword();
     //password = encryption::encrypt(password);
     Usercredential(collegename,password);
