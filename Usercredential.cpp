@@ -28,3 +28,7 @@ void usercredential(string username, string password){
         cout<<"\nPassword and Username combination not found\n"<<endl;
     }
 }
+
+/*void usercredential(registeration r){
+
+}*/

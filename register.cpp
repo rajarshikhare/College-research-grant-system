@@ -1,11 +1,12 @@
 
 
 class registeration{
+    string collegename,password,confirmpassword,collegetype,state,researchfield,city;
 public:
     registeration(){
         system("cls");
         cout<<"\n             ====================  Welcome to College/University Registeration Portal  ======================="<<endl<<endl<<endl<<endl<<endl;
-        string collegename,password,confirmpassword,collegetype,state,researchfield,city;
+        //string collegename,password,confirmpassword,collegetype,state,researchfield,city;
         cout<<"    ----------------------"<<endl<<endl;;
         cout<<"    Enter the college name : "<<endl<<endl;
         cout<<"    ----------------------"<<endl<<endl;;
@@ -31,12 +32,27 @@ public:
         cin>>researchfield;
         gotoxy(29,28);
         cin>>password;
-        //csvinput(this);
+        csvinput(*this);
         usercredential(collegename,password);
     }
     //friend
-    //freind usercredential(registeration);
+    //friend void usercredential(registeration);
+    friend void csvinput(registeration);
 };
 
 //#include"detailsentry.cpp"
 //#include"usercredential.cpp"
+
+void csvinput(registeration r){
+    fstream fp;
+    fp.open("csv files/colleges_details.csv",ios::app);
+    fp<<r.collegename<<",";
+    fp<<r.city<<",";
+    fp<<r.state<<",";
+    fp<<r.collegetype<<",";
+    fp<<r.researchfield<<","<<"\n";
+    fp.close();
+    fp.open("csv files/usercredential.csv",ios::app);
+    fp<<r.collegename<<","<<r.password<<"\n";
+    fp.close();
+}
