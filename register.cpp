@@ -53,6 +53,6 @@ void csvinput(registeration r){
     fp<<r.researchfield<<","<<"\n";
     fp.close();
     fp.open("csv files/usercredential.csv",ios::app);
-    fp<<r.collegename<<","<<r.password<<"\n";
+    fp<<r.collegename<<","<<r.password<<","<<"\n";
     fp.close();
 }
