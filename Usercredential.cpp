@@ -10,10 +10,13 @@ void usercredential(credentials c){
     while(1){
         getline(fp,fileusername,',');
         getline(fp,filepassword,',');
-        if(fileusername == username && filepassword == password){
+        if( fileusername == username && filepassword == password ){
             useroperationui();
         } else {
             getline(fp,filepassword,'\n');
+        }
+        if( fileusername == "*" ){
+            break;
         }
     }
     cout<<"\nPassword and Username combination not found\n"<<endl;
