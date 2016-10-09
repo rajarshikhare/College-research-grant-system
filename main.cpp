@@ -26,6 +26,6 @@ int main() {
         case (2) : registeration r;
                    break;
     }
-    return 1;
+    return 8;
 
 }
