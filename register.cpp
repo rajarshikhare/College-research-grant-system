@@ -33,15 +33,18 @@ public:
         gotoxy(29,28);
         cin>>password;
         csvinput(*this);
-        usercredential(collegename,password);
+        //usercredential(collegename,password);
     }
     //friend
-    //friend void usercredential(registeration);
+    friend void usercredential(registeration);
     friend void csvinput(registeration);
+    void login(){
+        usercredential(*this);
+    }
 };
 
 //#include"detailsentry.cpp"
-//#include"usercredential.cpp"
+#include"usercredential.cpp"
 
 void csvinput(registeration r){
     fstream fp;
