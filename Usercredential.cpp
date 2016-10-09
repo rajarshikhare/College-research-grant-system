@@ -35,7 +35,7 @@ void usercredential(string username, string password){
     }
 }
 
-void usercredential(registeration r){
+/*void usercredential(registeration r){
     string username = r.collegename;
     string password = r.password;
     fstream fp;
@@ -55,3 +55,4 @@ void usercredential(registeration r){
     }
     cout<<"\nPassword and Username combination not found\n"<<endl;
 }
+*/
