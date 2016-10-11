@@ -15,7 +15,7 @@ void usercredential(credentials c){
         } else {
             getline(fp,filepassword,'\n');
         }
-        if( fileusername == "*" ){
+        if( fp.eof() ){
             break;
         }
     }
