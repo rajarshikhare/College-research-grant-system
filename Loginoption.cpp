@@ -1,4 +1,5 @@
 #include"userui.cpp"
+#include"adminui.cpp"
 
 int loginoption(){
     system("cls");
@@ -16,7 +17,7 @@ int loginoption(){
     cout<<"Enter your choice : ";
     cin>>operation;
     switch (operation){
-        case (1) : //Admin();
+        case (1) : adminui();
                    break;
         case (2) : userui();
                    break;

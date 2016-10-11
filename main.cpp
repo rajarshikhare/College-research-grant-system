@@ -3,8 +3,8 @@ using namespace std;
 #include<cstring>
 #include<fstream>
 #include<conio.h>
-#include"position.h"
-#include"Loginoption.cpp"
+#include "position.h"
+#include "Loginoption.cpp"
 #include "register.cpp"
 
 int main() {

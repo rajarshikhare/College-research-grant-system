@@ -13,6 +13,7 @@ public:
         password = gethiddenpassword();
     }
     friend void usercredential(credentials);
+    friend void adminkey(credentials);
 };
 
 #include"usercredential.cpp"
