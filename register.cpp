@@ -34,8 +34,8 @@ public:
         cin>>password;
         csvinput(*this);
         usercredential(collegename,password);
+        //usercredential(*this);
     }
-    //friend
     //friend void usercredential(registeration);
     friend void csvinput(registeration);
 };

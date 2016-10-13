@@ -11,15 +11,16 @@ void usercredential(credentials c){
         getline(fp,fileusername,',');
         getline(fp,filepassword,',');
         if( fileusername == username && filepassword == password ){
+            fp.close();
             useroperationui();
         } else {
             getline(fp,filepassword,'\n');
         }
         if( fp.eof() ){
+            cout<<"\nPassword and Username combination not found\n"<<endl;
             break;
         }
     }
-    cout<<"\nPassword and Username combination not found\n"<<endl;
 }
 
 void usercredential(string username, string password){
@@ -49,10 +50,9 @@ void usercredential(string username, string password){
         } else {
             getline(fp,filepassword,'\n');
         }
-        if( fileusername == "*" ){
+        if( fp.eof() ){
+            cout<<"\nPassword and Username combination not found\n"<<endl;
             break;
         }
     }
-    cout<<"\nPassword and Username combination not found\n"<<endl;
-}
-*/
+}*/

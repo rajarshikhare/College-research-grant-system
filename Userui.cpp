@@ -40,10 +40,10 @@ void userui(){
 
 string gethiddenpassword(){
     int i = 0;
-    char c,pass[10];
+    char c,pass[100];
     while(1){
         c = getch();
-        if(c == '\b' && i == 0){
+        if(c == '\b' and i <= 0){
             continue;
         }
         if(c == 13){
