@@ -4,8 +4,9 @@ using namespace std;
 #include<fstream>
 #include<conio.h>
 #include "position.h"
-#include "Loginoption.cpp"
 #include "register.cpp"
+#include "Loginoption.cpp"
+
 
 
 int main() {

@@ -33,10 +33,10 @@ public:
         gotoxy(29,28);
         cin>>password;
         csvinput(*this);
-        usercredential(collegename,password);
-        //usercredential(*this);
+        //usercredential(collegename,password);
+        usercredential(*this);
     }
-    //friend void usercredential(registeration);
+    friend void usercredential(registeration);
     friend void csvinput(registeration);
 };
 

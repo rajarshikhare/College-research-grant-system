@@ -36,7 +36,7 @@ void usercredential(string username, string password){
     }
 }
 
-/*void usercredential(registeration r){
+void usercredential(registeration r){
     string username = r.collegename;
     string password = r.password;
     fstream fp;
@@ -55,4 +55,4 @@ void usercredential(string username, string password){
             break;
         }
     }
-}*/
+}
