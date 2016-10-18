@@ -28,5 +28,6 @@ int main() {
         case (2) : registeration r;
                    break;
     }
+    system("pause");
     return 8;
 }

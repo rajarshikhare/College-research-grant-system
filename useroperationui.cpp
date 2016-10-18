@@ -4,5 +4,4 @@
 void useroperationui(){
     system("cls");
     cout<<"\nuseroperationui success"<<endl;
-    exit(0);
 }

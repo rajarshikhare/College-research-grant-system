@@ -1,5 +1,4 @@
 
-
 class registeration{
     string collegename,password,confirmpassword,collegetype,state,researchfield,city;
 public:
@@ -33,7 +32,6 @@ public:
         gotoxy(29,28);
         cin>>password;
         csvinput(*this);
-        //usercredential(collegename,password);
         usercredential(*this);
     }
     friend void usercredential(registeration);
@@ -41,7 +39,6 @@ public:
 };
 
 //#include"detailsentry.cpp"
-//#include"usercredential.cpp"
 
 void csvinput(registeration r){
     fstream fp;
@@ -53,6 +50,6 @@ void csvinput(registeration r){
     fp<<r.researchfield<<","<<"\n";
     fp.close();
     fp.open("csv files/usercredential.csv",ios::app);
-    fp<<r.collegename<<","<<r.password<<","<<"\n";
+    fp<<r.collegename<<","<<r.password<<"\n";
     fp.close();
 }

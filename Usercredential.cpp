@@ -9,12 +9,10 @@ void usercredential(credentials c){
     fp.open("csv files/usercredential.csv",ios::in);
     while(1){
         getline(fp,fileusername,',');
-        getline(fp,filepassword,',');
+        getline(fp,filepassword,'\n');
         if( fileusername == username && filepassword == password ){
-            fp.close();
             useroperationui();
-        } else {
-            getline(fp,filepassword,'\n');
+            return;
         }
         if( fp.eof() ){
             cout<<"\nPassword and Username combination not found\n"<<endl;
@@ -28,11 +26,18 @@ void usercredential(string username, string password){
     string fileusername,filepassword;
     fp.open("csv files/usercredential.csv",ios::in);
     getline(fp,fileusername,',');
-    getline(fp,filepassword,',');
-    if(fileusername == username && filepassword == password){
-        useroperationui();
-    } else {
-        cout<<"\nPassword and Username combination not found\n"<<endl;
+    getline(fp,filepassword,'\n');
+    while(1){
+        getline(fp,fileusername,',');
+        getline(fp,filepassword,'\n');
+        if( fileusername == username && filepassword == password ){
+            useroperationui();
+            return;
+        }
+        if( fp.eof() ){
+            cout<<"\nPassword and Username combination not found\n"<<endl;
+            break;
+        }
     }
 }
 
@@ -44,11 +49,10 @@ void usercredential(registeration r){
     fp.open("csv files/usercredential.csv",ios::in);
     while(1){
         getline(fp,fileusername,',');
-        getline(fp,filepassword,',');
+        getline(fp,filepassword,'\n');
         if( fileusername == username && filepassword == password ){
             useroperationui();
-        } else {
-            getline(fp,filepassword,'\n');
+            return;
         }
         if( fp.eof() ){
             cout<<"\nPassword and Username combination not found\n"<<endl;
