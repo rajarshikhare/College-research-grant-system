@@ -1,36 +1,36 @@
 
 class registeration{
-    string collegename,password,confirmpassword,collegetype,state,researchfield,city;
+    std::string collegename,password,confirmpassword,collegetype,state,researchfield,city;
 public:
     registeration(){
         system("cls");
-        cout<<"\n             ====================  Welcome to College/University Registeration Portal  ======================="<<endl<<endl<<endl<<endl<<endl;
+        std::cout << "\n             ====================  Welcome to College/University Registeration Portal  ======================="<< std::endl<< std::endl<< std::endl<< std::endl << std::endl ;
         //string collegename,password,confirmpassword,collegetype,state,researchfield,city;
-        cout<<"    ----------------------"<<endl<<endl;;
-        cout<<"    Enter the college name : "<<endl<<endl;
-        cout<<"    ----------------------"<<endl<<endl;;
-        cout<<"                      City : "<<endl<<endl;
-        cout<<"    ----------------------"<<endl<<endl;;
-        cout<<"                     State : "<<endl<<endl;
-        cout<<"    ----------------------"<<endl<<endl;
-        cout<<"              College Type : "<<endl<<endl;
-        cout<<"    ----------------------"<<endl<<endl;;
-        cout<<"            Research Field : "<<endl<<endl;
-        cout<<"    ----------------------"<<endl<<endl;
-        cout<<"                  Passowrd : "<<endl<<endl;
-        cout<<"    ----------------------"<<endl<<endl;;
+        std::cout << "    ----------------------"<< std::endl << std::endl ;
+        std::cout << "    Enter the college name : "<< std::endl << std::endl ;
+        std::cout << "    ----------------------"<< std::endl << std::endl ;
+        std::cout << "                      City : "<< std::endl << std::endl ;
+        std::cout << "    ----------------------"<< std::endl << std::endl ;
+        std::cout << "                     State : "<< std::endl << std::endl ;
+        std::cout << "    ----------------------"<< std::endl << std::endl ;
+        std::cout << "              College Type : "<< std::endl << std::endl ;
+        std::cout << "    ----------------------"<< std::endl << std::endl ;
+        std::cout << "            Research Field : "<< std::endl << std::endl ;
+        std::cout << "    ----------------------"<< std::endl << std::endl ;
+        std::cout << "                  Passowrd : "<< std::endl << std::endl ;
+        std::cout << "    ----------------------"<< std::endl << std::endl ;
         gotoxy(29,8);
-        cin>>collegename;
+        std::cin >> collegename;
         gotoxy(29,12);
-        cin>>city;
+        std::cin >> city;
         gotoxy(29,16);
-        cin>>state;
+        std::cin >> state;
         gotoxy(29,20);
-        cin>>collegetype;
+        std::cin >> collegetype;
         gotoxy(29,24);
-        cin>>researchfield;
+        std::cin >> researchfield;
         gotoxy(29,28);
-        cin>>password;
+        std::cin >> password;
         csvinput(*this);
         usercredential(*this);
     }
@@ -41,15 +41,15 @@ public:
 //#include"detailsentry.cpp"
 
 void csvinput(registeration r){
-    fstream fp;
-    fp.open("csv files/colleges_details.csv",ios::app);
+    std::fstream fp;
+    fp.open("csv files/colleges_details.csv",std::ios::app);
     fp<<r.collegename<<",";
     fp<<r.city<<",";
     fp<<r.state<<",";
     fp<<r.collegetype<<",";
     fp<<r.researchfield<<","<<"\n";
     fp.close();
-    fp.open("csv files/usercredential.csv",ios::app);
+    fp.open("csv files/usercredential.csv",std::ios::app);
     fp<<r.collegename<<","<<r.password<<"\n";
     fp.close();
 }

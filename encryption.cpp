@@ -1,7 +1,7 @@
 
 class encryption{
     public:
-        static string encrypt(string s){
+        static std::string encrypt(std::string s){
             int i;
             int l = s.length();
             for(i = 0;i < l; i++){
@@ -10,7 +10,7 @@ class encryption{
             return s;
         }
 
-        static string decrypt(string s){
+        static std::string decrypt(std::string s){
             int i;
             int l = s.length();
             for(i = 0;i < l; i++){

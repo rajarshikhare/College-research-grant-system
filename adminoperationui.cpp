@@ -1,6 +1,6 @@
 
 void adminoperation(){
     system("cls");
-    cout<< "adminoperation successful"<<endl;
+    std::cout<< "adminoperation successful"<< std::endl;
     getch();
 }

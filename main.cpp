@@ -1,5 +1,4 @@
 #include<iostream>
-using namespace std;
 #include<cstring>
 #include<fstream>
 #include<conio.h>
@@ -12,16 +11,16 @@ using namespace std;
 int main() {
     system("cls");
     int operation;
-    cout<<"====================  Ministry of Human Resource Development About MHRD  ========================"<<endl<<endl;
-    cout<<"The Ministry of Human Resource Development, formerly Ministry of Education (until 25 September 1985),\nis responsible for the development of human resources in India. The Ministry is divided into two \ndepartments: the Department of School Education and Literacy, which deals with primary, secondary and \nhigher secondary education, adult education and literacy, and the Department of Higher Education, which \ndeals with university education, technical education, scholarship etc."<<endl<<endl<<endl<<endl;
-    cout<<"     -----------"<<endl;
-    cout<<"     1. Login"<<endl;
-    cout<<"     -----------"<<endl;
-    cout<<"     2. Register"<<endl;
-    cout<<"     -----------"<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
+    std::cout << "====================  Ministry of Human Resource Development About MHRD  ========================\n" << std::endl;
+    std::cout << "The Ministry of Human Resource Development, formerly Ministry of Education (until 25 September 1985),\nis responsible for the development of human resources in India. The Ministry is divided into two \ndepartments: the Department of School Education and Literacy, which deals with primary, secondary and \nhigher secondary education, adult education and literacy, and the Department of Higher Education, which \ndeals with university education, technical education, scholarship etc.\n\n\n" << std::endl;
+    std::cout << "     -----------" << std::endl;
+    std::cout << "     1. Login" << std::endl;
+    std::cout << "     -----------" << std::endl;
+    std::cout << "     2. Register" << std::endl;
+    std::cout << "     -----------\n\n\n\n\n\n" << std::endl;
 
-    cout<<"\n\nEnter your choice : ";
-    cin>>operation;
+    std::cout << "\n\nEnter your choice : ";
+    std::cin >> operation;
     switch (operation){
         case (1) : loginoption();
                    break;
@@ -29,5 +28,5 @@ int main() {
                    break;
     }
     system("pause");
-    return 8;
+    return 0;
 }

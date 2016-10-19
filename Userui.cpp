@@ -1,13 +1,13 @@
 
 #include"encryption.cpp"
 
-string gethiddenpassword();
+std::string gethiddenpassword();
 
 class credentials{
-    string username,password;
+    std::string username,password;
 public:
     void getusername(){
-        cin>>username;
+        std::cin >> username;
     }
     void getpassword(){
         password = gethiddenpassword();
@@ -21,16 +21,16 @@ public:
 void userui(){
     system("cls");
     credentials c;
-    cout<<"\n             ====================  Welcome to College/University Portal  ========================"<<endl<<endl<<endl<<endl<<endl;
-    string collegename,password;
-    cout<<"                                 ----------------------"<<endl;
-    cout<<"                                 Enter the college name : "<<endl;;
-    cout<<"                                 ----------------------"<<endl;
-    cout<<"\n                                               Password : ";
-    cout<<"\n                                 ----------------------"<<endl;
+    std::cout<< "\n             ====================  Welcome to College/University Portal  ========================"<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
+    std::string collegename,password;
+    std::cout<< "                                 ----------------------"<< std::endl;
+    std::cout<< "                                 Enter the college name : "<< std::endl;
+    std::cout<< "                                 ----------------------"<< std::endl;
+    std::cout<< "\n                                               Password : ";
+    std::cout<< "\n                                 ----------------------"<< std::endl;
     gotoxy(58,7);
     c.getusername();
-    cout<<"\n\n                                               Password : ";
+    std::cout<< "\n\n                                               Password : ";
     gotoxy(58,10);
     c.getpassword();
     usercredential(c);
@@ -38,7 +38,7 @@ void userui(){
 
 
 
-string gethiddenpassword(){
+std::string gethiddenpassword(){
     int i = 0;
     char c,pass[100];
     while(1){
@@ -49,17 +49,17 @@ string gethiddenpassword(){
         if(c == 13){
             break;
         } else if(c == '\b'){
-            cout<<"\b";
-            cout<<" ";
-            cout<<"\b";
+            std::cout<< "\b";
+            std::cout<< " ";
+            std::cout<< "\b";
             i--;
         } else {
-            cout<<"*";
+            std::cout<< "*";
             pass[i++] = c;
         }
     }
     pass[i] = '\0';
-    string str = string(pass);
-    cout<<"\n";
+    std::string str = std::string(pass);
+    std::cout<< "\n";
     return str;
 }
