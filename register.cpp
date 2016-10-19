@@ -4,7 +4,7 @@ class registeration{
 public:
     registeration(){
         system("cls");
-        std::cout << "\n             ====================  Welcome to College/University Registeration Portal  ======================="<< std::endl<< std::endl<< std::endl<< std::endl << std::endl ;
+        std::cout << "\n          ===================  Welcome to College/University Registeration Portal  ====================="<< std::endl<< std::endl<< std::endl<< std::endl << std::endl ;
         //string collegename,password,confirmpassword,collegetype,state,researchfield,city;
         std::cout << "    ----------------------"<< std::endl << std::endl ;
         std::cout << "    Enter the college name : "<< std::endl << std::endl ;
