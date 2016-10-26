@@ -47,7 +47,7 @@ void csvinput(registeration r){
     fp<<r.city<<",";
     fp<<r.state<<",";
     fp<<r.collegetype<<",";
-    fp<<r.researchfield<<","<<"\n";
+    fp<<r.researchfield<<"\n";
     fp.close();
     fp.open("csv files/usercredential.csv",std::ios::app);
     fp<<r.collegename<<","<<r.password<<"\n";

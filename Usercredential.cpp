@@ -11,7 +11,7 @@ void usercredential(credentials c){
         getline(fp,fileusername,',');
         getline(fp,filepassword,'\n');
         if( fileusername == username && filepassword == password ){
-            useroperationui();
+            useroperationui(username);
             return;
         }
         if( fp.eof() ){
@@ -31,7 +31,7 @@ void usercredential(std::string username, std::string password){
         getline(fp,fileusername,',');
         getline(fp,filepassword,'\n');
         if( fileusername == username && filepassword == password ){
-            useroperationui();
+            useroperationui(username);
             return;
         }
         if( fp.eof() ){
@@ -51,7 +51,7 @@ void usercredential(registeration r){
         getline(fp,fileusername,',');
         getline(fp,filepassword,'\n');
         if( fileusername == username && filepassword == password ){
-            useroperationui();
+            useroperationui(username);
             return;
         }
         if( fp.eof() ){
