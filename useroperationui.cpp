@@ -25,6 +25,7 @@ void useroperationui(std::string collegename){
 }
 
 void csvedit(std::string collegename){
+    system("cls");
     colleges_details(collegename);
 }
 
@@ -35,10 +36,9 @@ void colleges_details(std::string collegename){
         fp.open("csv files/colleges_details.csv",std::ios::in);
         while(1){
             getline(fp,filecollegename,',');
-
             if( filecollegename == collegename ){
                 system("cls");
-                std::cout << "\n          ===================  Edit details College/University  ====================="<< std::endl<< std::endl<< std::endl<< std::endl << std::endl ;
+                std::cout << "\n          ===================  Overwrite your Details  ====================="<< std::endl<< std::endl<< std::endl<< std::endl << std::endl ;
                 //string collegename,password,confirmpassword,collegetype,state,researchfield,city;
                 std::cout << "    ----------------------"<< std::endl << std::endl ;
                 std::cout << "              college name : "<< filecollegename << std::endl << std::endl ;
@@ -55,7 +55,7 @@ void colleges_details(std::string collegename){
                 getline(fp,filecollegename,'\n');
                 std::cout << "            Research Field : "<<filecollegename<< std::endl << std::endl ;
                 std::cout << "    ----------------------"<< std::endl << std::endl ;
-                std::cout << "                  Passowrd : "<<filecollegename<< std::endl << std::endl ;
+                std::cout << "                  Passowrd : "<<"Type new password"<< std::endl << std::endl ;
                 std::cout << "    ----------------------"<< std::endl << std::endl ;
                 gotoxy(29,8);
                 std::cin >> collegename;
