@@ -12,28 +12,30 @@ public:
     void getpassword(){
         password = gethiddenpassword();
     }
-    friend void usercredential(credentials);
+    friend int usercredential(credentials);
     friend void adminkey(credentials);
 };
 
 #include"usercredential.cpp"
 
 void userui(){
-    system("cls");
     credentials c;
-    std::cout<< "\n             ====================  Welcome to College/University Portal  ========================"<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
-    std::string collegename,password;
-    std::cout<< "                                 ----------------------"<< std::endl;
-    std::cout<< "                                 Enter the college name : "<< std::endl;
-    std::cout<< "                                 ----------------------"<< std::endl;
-    std::cout<< "\n                                               Password : ";
-    std::cout<< "\n                                 ----------------------"<< std::endl;
-    gotoxy(58,7);
-    c.getusername();
-    std::cout<< "\n\n                                               Password : ";
-    gotoxy(58,10);
-    c.getpassword();
-    usercredential(c);
+    do{
+        system("cls");
+        std::cout<< "\n             ====================  Welcome to College/University Portal  ========================"<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
+        std::string collegename,password;
+        std::cout<< "                                 ----------------------"<< std::endl;
+        std::cout<< "                                 Enter the college name : "<< std::endl;
+        std::cout<< "                                 ----------------------"<< std::endl;
+        std::cout<< "\n                                               Password : ";
+        std::cout<< "\n                                 ----------------------"<< std::endl;
+        gotoxy(58,7);
+        c.getusername();
+        std::cout<< "\n\n                                               Password : ";
+        gotoxy(58,10);
+        c.getpassword();
+        //usercredential(c);
+    } while(!usercredential(c));
 }
 
 
