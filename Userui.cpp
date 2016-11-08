@@ -22,17 +22,17 @@ void userui(){
     credentials c;
     do{
         system("cls");
-        std::cout<< "\n             ====================  Welcome to College/University Portal  ========================"<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
+        std::cout<< "\n **********************************  Welcome to College/University Portal  *********************************"<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
         std::string collegename,password;
         std::cout<< "                                 ----------------------"<< std::endl;
         std::cout<< "                                 Enter the college name : "<< std::endl;
         std::cout<< "                                 ----------------------"<< std::endl;
-        std::cout<< "\n                                               Password : ";
+        std::cout<< "                                               Password : ";
         std::cout<< "\n                                 ----------------------"<< std::endl;
         gotoxy(58,7);
         c.getusername();
-        std::cout<< "\n\n                                               Password : ";
-        gotoxy(58,10);
+        std::cout<< "\n                                               Password : ";
+        gotoxy(58,9);
         c.getpassword();
         //usercredential(c);
     } while(!usercredential(c));

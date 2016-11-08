@@ -13,7 +13,7 @@ int main() {
     system("color 2E");
     system("cls");
     int operation;
-    std::cout << "    **********************  Ministry of Human Resource Development About MHRD  ************************\n" << std::endl;
+    std::cout << " **************************  Ministry of Human Resource Development About MHRD  ***************************** \n" << std::endl;
     std::cout << "    The Ministry of Human Resource Development, formerly Ministry of Education (until 25 September 1985),\n    is responsible for the development of human resources in India. The Ministry is divided into two \n    departments: the Department of School Education and Literacy, which deals with primary, secondary and \n    higher secondary education, adult education and literacy, and the Department of Higher Education, which \n  \tdeals with university education, technical education, scholarship etc.\n\n\n" << std::endl;
     std::cout << "     -----------" << std::endl;
     std::cout << "     1. Login" << std::endl;

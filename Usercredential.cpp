@@ -15,10 +15,12 @@ int usercredential(credentials c){
         getline(fp,fileusername,',');
         getline(fp,filepassword,'\n');
         if( fileusername == username && filepassword == password ){
+            fp.close();
             useroperationui(username);
             return 1;
         }
         if( fp.eof() ){
+            fp.close();
             std::cout <<"\nPassword and Username combination not found\n"<< std::endl;
             break;
         }
@@ -26,26 +28,6 @@ int usercredential(credentials c){
     return 0;
 }
 
-int usercredential(std::string username, std::string password){
-    std::fstream fp;
-    std::string fileusername,filepassword;
-    fp.open("csv files/usercredential.csv",std::ios::in);
-    getline(fp,fileusername,',');
-    getline(fp,filepassword,'\n');
-    while(1){
-        getline(fp,fileusername,',');
-        getline(fp,filepassword,'\n');
-        if( fileusername == username && filepassword == password ){
-            useroperationui(username);
-            return 1;
-        }
-        if( fp.eof() ){
-            std::cout <<"\nPassword and Username combination not found\n"<< std::endl;
-            break;
-        }
-    }
-    return 0;
-}
 
 int usercredential(registeration r){
     std::string username = r.collegename;
@@ -57,10 +39,12 @@ int usercredential(registeration r){
         getline(fp,fileusername,',');
         getline(fp,filepassword,'\n');
         if( fileusername == username && filepassword == password ){
+            fp.close();
             useroperationui(username);
             return 1;
         }
         if( fp.eof() ){
+            fp.close();
             std::cout <<"\nPassword and Username combination not found\n"<< std::endl;
             break;
         }

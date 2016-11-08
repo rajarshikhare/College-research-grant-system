@@ -1,5 +1,6 @@
 
 class registeration{
+    char *temp;
     std::string collegename,password,confirmpassword,collegetype,state,researchfield,city;
 public:
     registeration(){
@@ -19,15 +20,21 @@ public:
         std::cout << "                  Passowrd : "<< std::endl << std::endl ;
         std::cout << "    ----------------------"<< std::endl << std::endl ;
         gotoxy(29,8);
-        std::cin >> collegename;
+        getchar();
+        gets(temp);
+        collegename = std::string(temp);
         gotoxy(29,12);
-        std::cin >> city;
+        gets(temp);
+        city = std::string(temp);
         gotoxy(29,16);
-        std::cin >> state;
+        gets(temp);
+        state = std::string(temp);
         gotoxy(29,20);
-        std::cin >> collegetype;
+        gets(temp);
+        collegetype = std::string(temp);
         gotoxy(29,24);
-        std::cin >> researchfield;
+        gets(temp);
+        researchfield = std::string(temp);
         gotoxy(29,28);
         std::cin >> password;
         csvinput(*this);
