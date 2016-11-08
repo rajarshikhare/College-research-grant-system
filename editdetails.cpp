@@ -3,13 +3,13 @@ class CollegeDetailslege_details;
 
 
 class CollegeDetails{
-
+	std::string collegename;
 public:
-	std::string collegename,collegename1,password,confirmpassword,collegetype,state,researchfield,city;
+	std::string /*collegename*/collegename1,password,confirmpassword,collegetype,state,researchfield,city;
+	char *temp1;
 	friend void csveditinput(std::string);
     CollegeDetails(std::string collegenametemp){
     		collegename = collegenametemp;
-    		char *temp1;
             std::fstream fp;
             std::string filecollegename,filepassword;
             fp.open("csv files/colleges_details.csv",std::ios::in);
@@ -18,46 +18,50 @@ public:
                 if( filecollegename == collegename ){
                     system("cls");
                     std::cout << "\n          ===================  Overwrite your Details  ====================="<< std::endl<< std::endl<< std::endl<< std::endl << std::endl ;
-                    //string CollegeDetailslegename,password,confirmpassword,CollegeDetailslegetype,state,researchfield,city;
-                    std::cout << "    ----------------------"<< std::endl << std::endl ;
-                    std::cout << "              College name : "<< filecollegename << std::endl << std::endl ;
-                    std::cout << "    ----------------------"<< std::endl << std::endl ;
+                    std::cout << "    ----------------------"<< std::endl ;
+                    std::cout << "         College name old : "<< filecollegename << std::endl;
+					std::cout << "         College name new : "<< std::endl;
+                    std::cout << "    ----------------------"<< std::endl ;
                     getline(fp,filecollegename,',');
-                    std::cout << "                      City : "<<filecollegename<< std::endl << std::endl ;
-                    std::cout << "    ----------------------"<< std::endl << std::endl ;
+                    std::cout << "                 City old : "<<filecollegename<< std::endl ;
+					std::cout << "                 City new : "<< std::endl ;
+                    std::cout << "    ----------------------"<< std::endl ;
                     getline(fp,filecollegename,',');
-                    std::cout << "                     State : "<<filecollegename<< std::endl << std::endl ;
-                    std::cout << "    ----------------------"<< std::endl << std::endl ;
+                    std::cout << "                State old : "<<filecollegename<< std::endl ;
+					std::cout << "                State new : "<< std::endl ;
+                    std::cout << "    ----------------------"<< std::endl ;
                     getline(fp,filecollegename,',');
-                    std::cout << "              College Type : "<<filecollegename<< std::endl << std::endl ;
-                    std::cout << "    ----------------------"<< std::endl << std::endl ;
+                    std::cout << "         College Type old : "<<filecollegename<< std::endl ;
+					std::cout << "         College Type new : "<< std::endl ;
+                    std::cout << "    ----------------------"<< std::endl ;
                     getline(fp,filecollegename,'\n');
-                    std::cout << "            Research Field : "<<filecollegename<< std::endl << std::endl ;
+                    std::cout << "       Research Field old : "<<filecollegename<< std::endl;
+					std::cout << "       Research Field new : "<< std::endl ;
+                    std::cout << "    ----------------------"<< std::endl ;
+                    std::cout << "             new Password : "<< std::endl ;
                     std::cout << "    ----------------------"<< std::endl << std::endl ;
-                    std::cout << "                  Password : "<< std::endl << std::endl ;
-                    std::cout << "    ----------------------"<< std::endl << std::endl ;
-                    gotoxy(29,8);
+                    gotoxy(28,8);
                     getchar();
-                    //gets(temp1);
-                    std::cin>>collegename1;
-                    //collegename = std::string(temp1);
-                    gotoxy(29,12);
-                    //gets(temp1);
-                    std::cin>>city;
-                    //city = std::string(temp1);
-                    gotoxy(29,16);
-                    //gets(temp1);
-                    std::cin>>state;
-                    //state = std::string(temp1);
-                    gotoxy(29,20);
-                    //gets(temp1);
-                    std::cin>>collegetype;
-                    //collegetype = std::string(temp1);
-                    gotoxy(29,24);
-                    //gets(temp1);
-                    std::cin>>researchfield;
-                    //researchfield = std::string(temp1);
-                    gotoxy(29,28);
+                    gets(temp1);
+                    //std::cin>>collegename1;
+                    collegename1 = std::string(temp1);
+                    gotoxy(28,11);
+                    gets(temp1);
+                    //std::cin>>city;
+                    city = std::string(temp1);
+                    gotoxy(28,14);
+                    gets(temp1);
+                    //std::cin>>state;
+                    state = std::string(temp1);
+                    gotoxy(28,17);
+                    gets(temp1);
+                    //std::cin>>collegetype;
+                    collegetype = std::string(temp1);
+                    gotoxy(28,20);
+                    gets(temp1);
+                    //std::cin>>researchfield;
+                    researchfield = std::string(temp1);
+                    gotoxy(28,22);
                     std::cin >> password;
                 }
                 getline(fp,filepassword,'\n');
@@ -65,7 +69,7 @@ public:
         }
 };
 
-csveditinput(CollegeDetails ob){
+void csveditinput(CollegeDetails ob){
     std::string collegename,password,confirmpassword,collegetype,state,researchfield,city;
     std::fstream fpold,fpnew;
     fpold.open("csv files/colleges_details.csv",std::ios::in);
