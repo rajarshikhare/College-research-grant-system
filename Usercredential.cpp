@@ -15,7 +15,6 @@ int usercredential(credentials c){
         if( fp.eof() ){
             fp.close();
             return 0;
-            break;
         }
     }
     return 0;

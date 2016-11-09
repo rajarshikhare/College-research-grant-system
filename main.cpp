@@ -4,7 +4,7 @@
 #include<conio.h>
 #include "position.h"
 #include "register.cpp"
-#include "Loginoption.cpp"
+#include "login_option.cpp"
 
 
 int main() {
@@ -24,7 +24,7 @@ int main() {
             std::cout << "\n\nEnter your choice : ";
             std::cin >> operation;
             switch (operation){
-                case (1) : {loginoption();
+                case (1) : {login_option();
                            break;}
                 case (2) : {registeration r;
                            break;}

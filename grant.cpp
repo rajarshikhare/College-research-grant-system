@@ -12,7 +12,7 @@ class grant
 			{
 				std::cin>>new_grant;
 			}
-			
+
 			void rate_calc(std::string);
 			void grant_increase(std::string);
 			void found(grant);
@@ -24,17 +24,17 @@ class grant
 void grant::rate_calc(std::string college_name)
 {
 	std::fstream fp1;
-	
+
 	std::string file_college_name, temp_projects, temp_completed, str_grant, r;
 	int projects;
 	double completed;
-	
+
 	std::fstream fp2;
 	std::fstream fpnew;
 
 	fp1.open("csv files/project.csv",std::ios::in);
 	fpnew.open("csv files/temp.csv",std::ios::out);
-	
+
 	fp2.open("csv files/grant.csv",std::ios::in);
 	getline(fp2,file_college_name,',');
 	getline(fp2,str_grant,',');
@@ -44,63 +44,63 @@ void grant::rate_calc(std::string college_name)
 		getline(fp1,file_college_name,',');
 		getline(fp1,temp_projects,',');
 		getline(fp1,temp_completed,'\n');
-	
+
 		projects = atoi(temp_projects.c_str());
 		completed = atoi(temp_completed.c_str());
-	
+
 		rate = (completed / projects) * 10;
-	
+
         fpnew<<file_college_name<<","<<str_grant<<","<<rate<<std::endl;
-        
+
         if(file_college_name == college_name)
         {
         	this->college_name = college_name;
         	this->new_grant = atof(str_grant.c_str());
         	this->rate = rate;
 		}
-        
+
         getline(fp2,file_college_name,',');
 		getline(fp2,str_grant,',');
 		getline(fp2,r,'\n');
     }
-    
+
     fp1.close();
     fp2.close();
     fpnew.close();
-    
-	std::remove("csv files/grant.csv");
-    std::rename("csv files/temp.csv", "csv files/grant.csv"); 
+
+	remove("csv files/grant.csv");
+    rename("csv files/temp.csv", "csv files/grant.csv"); 
 }
 
 void grant::grant_increase(std::string college_name)
 {
 	grant obj;
-	
+
 	rate_calc(college_name);
     std::fstream fp1;
     std::fstream fp2;
     std::string fileusername, str_grant, r, projects, completed;
-        
+
     fp1.open("csv files/grant.csv",std::ios::in);
     fp2.open("csv files/project.csv",std::ios::in);
     while(1){
         getline(fp1,fileusername,',');
         getline(fp1,str_grant,',');
         getline(fp1,r,'\n');
-        
+
 		getline(fp2,fileusername,',');
         getline(fp2,projects,',');
         getline(fp2,completed,'\n');
-        
+
         if( fileusername == college_name )
 		{
 			obj.college_name = college_name;
 			obj.old_grant = atof(str_grant.c_str());
 			obj.rate = atoi(r.c_str());
-			
+
 			obj.total_projects = atof(projects.c_str());
 			obj.completed_projects = atof(completed.c_str());
-			
+
 			found(obj);
             fp1.close();
             break;
@@ -108,7 +108,7 @@ void grant::grant_increase(std::string college_name)
     }
 }
 void grant::found(grant obj)
-{	
+{
 	system("cls");
     std::cout<< "\n **********************************  Welcome to College/University Portal  *********************************"<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
     std::string new_grant;
@@ -117,13 +117,13 @@ void grant::found(grant obj)
     std::cout<< "                                 --------------------"<< std::endl;
     std::cout<< "                                 Enter New Grant(Rs.) : ";
     std::cout<< "\n                                 --------------------"<< std::endl;
-    
+
 	gotoxy(56,9);
 	obj.get_grant();
-	
-	double default_grant = obj.old_grant + (obj.old_grant * obj.rate); 
+
+	double default_grant = obj.old_grant + (obj.old_grant * obj.rate);
 	double g = atof(obj.new_grant.c_str());
-	
+
 	if(obj.completed_projects > (obj.total_projects / 4.0))
 	{
 		if(default_grant > g)
@@ -146,6 +146,5 @@ void grant::found(grant obj)
 		gotoxy(21,16);
 		std::cout<<obj.completed_projects<<" out of "<<obj.total_projects<<" projects are completed which doesn't suffice the criteria."<<std::endl;
 	}
-        
-}
 
+}

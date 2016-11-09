@@ -36,7 +36,8 @@ void userui(){
         gotoxy(58,9);
         c.getpassword();
         if(!usercredential(c)){
-        	std::cout << "Wrong username password combination" << std::endl;
+        	std::cout << "\n\n\t\t\t\tWrong username password combination" << std::endl;
+            system("pause");
 		}
     }
 }
