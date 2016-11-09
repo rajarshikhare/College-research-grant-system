@@ -1,9 +1,4 @@
-
-
-
-
 #include "useroperationui.cpp"
-
 
 int usercredential(credentials c){
     std::fstream fp;
@@ -19,7 +14,7 @@ int usercredential(credentials c){
         }
         if( fp.eof() ){
             fp.close();
-            std::cout <<"\nPassword and Username combination not found\n"<< std::endl;
+            return 0;
             break;
         }
     }

@@ -44,7 +44,6 @@ public:
     friend void csvinput(registeration);
 };
 
-//#include"detailsentry.cpp"
 
 void csvinput(registeration r){
     std::fstream fp;

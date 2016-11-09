@@ -3,13 +3,12 @@ class CollegeDetailslege_details;
 
 
 class CollegeDetails{
-	std::string collegename;
 public:
-	std::string /*collegename*/collegename1,password,confirmpassword,collegetype,state,researchfield,city;
+	std::string collegename,collegename1,password,confirmpassword,collegetype,state,researchfield,city;
 	char *temp1;
 	friend void csveditinput(std::string);
-    CollegeDetails(std::string collegenametemp){
-    		collegename = collegenametemp;
+    CollegeDetails(std::string collegename){
+    		this->collegename = collegename;
             std::fstream fp;
             std::string filecollegename,filepassword;
             fp.open("csv files/colleges_details.csv",std::ios::in);
@@ -40,8 +39,8 @@ public:
                     std::cout << "    ----------------------"<< std::endl ;
                     std::cout << "             new Password : "<< std::endl ;
                     std::cout << "    ----------------------"<< std::endl << std::endl ;
-                    gotoxy(28,8);
                     getchar();
+					gotoxy(28,8);
                     gets(temp1);
                     //std::cin>>collegename1;
                     collegename1 = std::string(temp1);

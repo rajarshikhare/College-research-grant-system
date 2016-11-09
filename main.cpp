@@ -7,7 +7,6 @@
 #include "Loginoption.cpp"
 
 
-
 int main() {
     system("mode 110,36");
     system("color 2E");
@@ -20,14 +19,18 @@ int main() {
     std::cout << "     -----------" << std::endl;
     std::cout << "     2. Register" << std::endl;
     std::cout << "     -----------\n\n\n\n\n\n" << std::endl;
-    std::cout << "\n\nEnter your choice : ";
-    std::cin >> operation;
-    switch (operation){
-        case (1) : loginoption();
-                   break;
-        case (2) : registeration r;
-                   break;
+    while(1){
+        std::cout << "\n\nEnter your choice : ";
+        std::cin >> operation;
+        switch (operation){
+            case (1) : {loginoption();
+                       break;}
+            case (2) : {registeration r;
+                       break;}
+            default  : {std::cout << "\nwrong choice" << std::endl;
+                       break;}
+        }
     }
-    system("pause");
+    //system("pause");
     return 0;
 }

@@ -18,10 +18,30 @@ void adminui(){
     adminkey(c);
 }
 
-void adminkey(credentials c){
+/*void adminkey(credentials c){
     if( c.username == "admin" && c.password == "password"){
         adminoperation();
     } else {
         std::cout  << "Wrong username and password combination" << std::endl;
     }
+}*/
+
+int adminkey(credentials c){
+    std::fstream fp;
+    std::string fileusername,filepassword;
+    fp.open("csv files/admincredentials.csv",std::ios::in);
+    getline(fp,fileusername,',');
+    getline(fp,filepassword,'\n');
+    getline(fp,fileusername,',');
+    getline(fp,filepassword,'\n');
+    if( fileusername == c.username && filepassword == c.password ){
+        fp.close();
+        adminoperation();
+        return 1;
+    }
+    if( fp.eof() ){
+        fp.close();
+        std::cout <<"\nPassword and Username combination not found\n"<< std::endl;
+    }
+    return 0;
 }

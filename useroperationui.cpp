@@ -4,6 +4,7 @@
 void useroperationui(std::string collegename){
     int operation;
     system("cls");
+    getchar();
     std::cout << "\n\t\t=======================  WELCOME TO "<<collegename<<" PORTAL ==========================\n\n\n" << std::endl;
     std::cout << "     \t\t\t\t---------------------------------" << std::endl;
     std::cout << "     \t\t\t\t1. Grant increasse" << std::endl;
@@ -15,6 +16,7 @@ void useroperationui(std::string collegename){
 
     std::cout << "\n\nEnter your choice : ";
     std::cin >> operation;
+    std::cout<<operation;
     switch (operation){
         /*case (1) : grantincrease();
                    break;

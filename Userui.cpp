@@ -13,7 +13,7 @@ public:
         password = gethiddenpassword();
     }
     friend int usercredential(credentials);
-    friend void adminkey(credentials);
+    friend int adminkey(credentials);
 };
 
 #include"usercredential.cpp"
@@ -37,8 +37,6 @@ void userui(){
         //usercredential(c);
     } while(!usercredential(c));
 }
-
-
 
 std::string gethiddenpassword(){
     int i = 0;
