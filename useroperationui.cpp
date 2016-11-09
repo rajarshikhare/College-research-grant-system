@@ -4,7 +4,6 @@
 void useroperationui(std::string collegename){
     int operation;
     while(1){
-        std::cin.ignore();
         system("cls");
         std::cout << "\n\t\t=======================  WELCOME TO "<<collegename<<" PORTAL ==========================\n\n\n" << std::endl;
         std::cout << "     \t\t\t\t---------------------------------" << std::endl;
