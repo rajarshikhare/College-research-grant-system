@@ -7,7 +7,8 @@ class credentials{
     std::string username,password;
 public:
     void getusername(){
-        std::cin >> username;
+    	std::cin.ignore();
+    	getline(std::cin,username);
     }
     void getpassword(){
         password = gethiddenpassword();
@@ -20,7 +21,7 @@ public:
 
 void userui(){
     credentials c;
-    do{
+    while(1){
         system("cls");
         std::cout<< "\n **********************************  Welcome to College/University Portal  *********************************"<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
         std::string collegename,password;
@@ -34,8 +35,10 @@ void userui(){
         std::cout<< "\n                                               Password : ";
         gotoxy(58,9);
         c.getpassword();
-        //usercredential(c);
-    } while(!usercredential(c));
+        if(!usercredential(c)){
+        	std::cout << "Wrong username password combination" << std::endl;
+		}
+    }
 }
 
 std::string gethiddenpassword(){
