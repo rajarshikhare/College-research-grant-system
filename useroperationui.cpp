@@ -1,5 +1,5 @@
 #include"editdetails.cpp"
-
+#include "grant.cpp"
 
 void useroperationui(std::string collegename){
     int operation;
@@ -18,14 +18,15 @@ void useroperationui(std::string collegename){
 
         std::cout << "\n\nEnter your choice : ";
         std::cin >> operation;
-        std::cout<<operation;
         switch (operation){
-            /*case (1) : grantincrease();
-                       break;
-            case (2) : newgrant();
-                       break;*/
-            case (3) : csvedit(collegename);
-                       break;
+            case (1) : {grant ob;
+                        ob.grant_increase(collegename);
+                        break;}
+            case (2) : {grant ob;
+                        ob.new_grantfunc(collegename);
+                        break;}
+            case (3) : {csvedit(collegename);
+                        break;}
             case (4) : return;
         }
     }

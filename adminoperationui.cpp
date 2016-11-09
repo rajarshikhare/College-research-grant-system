@@ -1,3 +1,4 @@
+
 void edit_password(){
     std::string username,password;
     std::string new_password;
@@ -20,7 +21,7 @@ void edit_password(){
 
 void list(){
     system("cls");
-    std::cout << "\n\t\t=======================  College List ==========================\n\n\n" << std::endl;
+    std::cout << "\n\t\t***********************  College List **************************\n\n\n" << std::endl;
     std::string college_name,temp;
     int i = 1;
     std::fstream fp;
@@ -41,7 +42,7 @@ void adminoperation(){
     int operation;
     while(1){
         system("cls");
-        std::cout << "\n\t\t=======================  WELCOME TO Administrator PORTAL ==========================\n\n\n" << std::endl;
+        std::cout << "\n\t\t***********************  WELCOME TO Administrator PORTAL **************************\n\n\n" << std::endl;
         std::cout << "     \t\t\t\t---------------------------------" << std::endl;
         std::cout << "     \t\t\t\t1. List of colleges" << std::endl;
         std::cout << "     \t\t\t\t---------------------------------" << std::endl;
