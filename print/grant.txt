@@ -150,4 +150,3 @@ void grant::found(grant obj)
     
     system("pause");
 }
-

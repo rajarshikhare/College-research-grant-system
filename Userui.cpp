@@ -1,18 +1,17 @@
-
 #include"encryption.cpp"
 
 std::string gethiddenpassword();
 
 class credentials{
     std::string username,password;
+    //char temp1[100], temp2[100];
 public:
     void getusername(){
-    	std::cin.ignore();
     	getline(std::cin,username);
     }
     void getpassword(){
-        password = gethiddenpassword();
-    }
+    	password = gethiddenpassword();
+	}
     friend int usercredential(credentials);
     friend int adminkey(credentials);
 };
@@ -21,7 +20,9 @@ public:
 
 void userui(){
     credentials c;
+    
     while(1){
+    	std::cin.ignore();
         system("cls");
         std::cout<< "\n **********************************  Welcome to College/University Portal  *********************************"<< std::endl<< std::endl<< std::endl<< std::endl<< std::endl;
         std::string collegename,password;
@@ -35,9 +36,9 @@ void userui(){
         std::cout<< "\n                                               Password : ";
         gotoxy(58,9);
         c.getpassword();
+        
         if(!usercredential(c)){
-        	std::cout << "\n\n\t\t\t\tWrong username password combination" << std::endl;
-            system("pause");
+        	//std::cout << "Wrong username password combination" << std::endl;
 		}
     }
 }

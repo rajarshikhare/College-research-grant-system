@@ -14,12 +14,13 @@ int usercredential(credentials c){
         }
         if( fp.eof() ){
             fp.close();
-            return 0;
+            std::cout <<"\n\n\t\t\t\tPassword and Username combination not found\n"<< std::endl;
+            break;
         }
     }
+    system("pause");
     return 0;
 }
-
 
 int usercredential(registeration r){
     std::fstream fp;
@@ -35,7 +36,7 @@ int usercredential(registeration r){
         }
         if( fp.eof() ){
             fp.close();
-            std::cout <<"\nPassword and Username combination not found\n"<< std::endl;
+            std::cout <<"\n\n\t\t\t\tPassword and Username combination not found\n"<< std::endl;
             break;
         }
     }
