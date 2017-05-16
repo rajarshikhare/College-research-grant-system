@@ -8,7 +8,7 @@
 
 int main() 
 {
-    system("mode 110,36");
+    system("mode 110,30");
     system("color 2E");
     while(1){
         system("cls");
